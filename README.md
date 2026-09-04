@@ -5,7 +5,9 @@ Aplicativo desenvolvido em Dart e Flutter para gerenciamento de uma biblioteca d
 . Maria Bueno
 . Isadora Lamas 
 
-# Dominio
+# Dominio :
+
+Uma biblioteca de jogos 
 
 
 # Tabela de rastreio
