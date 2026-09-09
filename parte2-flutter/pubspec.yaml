@@ -1,14 +1,25 @@
-name: parte1_dart
-description: A simple command-line application.
-version: 1.0.0
-# repository: https://github.com/my_org/my_repo
+name: parte2_flutter
+
+description: Aplicativo Biblioteca de Jogos desenvolvido em Flutter.
+
+publish_to: 'none'
+
+version: 1.0.0+1
 
 environment:
   sdk: ^3.12.2
 
-# Add regular dependencies here.
 dependencies:
-  # path: ^1.9.0
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
 
 dev_dependencies:
-  lints: ^6.0.0
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
