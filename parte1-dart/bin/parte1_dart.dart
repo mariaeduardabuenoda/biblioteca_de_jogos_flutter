@@ -49,4 +49,21 @@ void main(){
   for (final jogo in biblioteca.jogos) {
     print('  - ${jogo.titulo}');
   }
+
+print('===== [4] ENCAPSULAMENTO =====');
+
+print('Total de jogos: ${biblioteca.totalJogos}');
+
+final novoJogo = Jogo(
+  titulo: 'Mortal Kombat 1',
+  plataforma: 'PS5',
+  genero: 'Luta',
+  anoLancamento: 2023,
+  preco: 299.90,
+  dataCadastro: DateTime.now(),
+  );
+
+biblioteca.adicionarJogo(novoJogo);
+
+print('Total de jogos após adicionar: ${biblioteca.totalJogos}');
 }
