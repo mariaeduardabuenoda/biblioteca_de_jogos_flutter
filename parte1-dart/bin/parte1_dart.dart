@@ -1,5 +1,6 @@
 import 'lib/models/jogo.dart';
 import 'lib/models/jogo_online.dart';
+import 'lib/models/biblioteca.dart';
 
 
 void main(){
@@ -33,4 +34,19 @@ void main(){
   print('===== [2] HERANCA =====');
   print(jogo.ficha());
   print(jogoOnline.ficha());
+
+    final biblioteca = Biblioteca(
+    nome: 'Biblioteca Gamer',
+    jogos: [jogo, jogoOnline],
+  );
+
+  print('===== [3] COMPOSICAO =====');
+  print(
+    'Biblioteca "${biblioteca.nome}" contém '
+    '${biblioteca.jogos.length} jogos:',
+  );
+
+  for (final jogo in biblioteca.jogos) {
+    print('  - ${jogo.titulo}');
+  }
 }
