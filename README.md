@@ -8,14 +8,12 @@ Aplicativo desenvolvido em Dart e Flutter para gerenciamento de uma biblioteca d
 
 Uma biblioteca de jogos 
 
+A Biblioteca de Jogos é composta pelas entidades Biblioteca, Jogo e JogoOnline: a Biblioteca agrupa e gerencia diversos objetos Jogo, enquanto JogoOnline especializa Jogo por meio de herança, adicionando características específicas de jogos online, como modo multiplayer e número de jogadores.
+
 
 ## Tabela de rastreio
 
-O `README.md` do repositório precisa conter esta tabela preenchida. É por ela que a correção é fornecida, e é ela que orienta a apresentação. Sem a tabela, o trabalho não é corrigido.
 
-## Tabela de rastreio
-
-O `README.md` precisa conter esta tabela preenchida para a orientação da correção e apresentação.
 
 | # | Exercício | Arquivo e linha | O que aparece na tela |
 |---|---|---|---|
