@@ -1,21 +1,19 @@
-import 'jogo.dart';
+ import 'jogo.dart';
 
 class Biblioteca {
   String nome;
-  List<Jogo> _jogos;
+  final List<Jogo> _jogos;
 
   Biblioteca({
     required this.nome,
-    required List<Jogo> jogos,
-  }) : _jogos = jogos;
+    required this._jogos,
+  });
 
-// Getter público para expor a lista no main.dart
-
-List<Jogo> get jogos => _jogos;
-
-  void adicionarJogo(Jogo jogo) {
-    _jogos.add(jogo);
-  }
+  List<Jogo> get jogos => _jogos;
 
   int get totalJogos => _jogos.length;
+
+  void adicionar(Jogo jogo) {
+    _jogos.add(jogo);
+  }
 }

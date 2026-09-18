@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import'package:flutter/material.dart';
 import '../models/jogo.dart';
 import '../models/biblioteca.dart';
 import '../widgets/jogo_card.dart';
@@ -79,6 +79,20 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
+  Future<void> abrirCadastro() async {
+    final novoJogo = await Navigator.of(context).push<Jogo>(
+      MaterialPageRoute(
+        builder: (context) => const CadastroPage(),
+      ),
+    );
+
+    if (novoJogo != null) {
+      setState(() {
+        biblioteca.adicionar(novoJogo);
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,23 +101,11 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
         backgroundColor: Colors.deepPurple,
         foregroundColor: Colors.white,
-
         actions: [
           IconButton(
+            onPressed: abrirCadastro,
             icon: const Icon(Icons.add),
-            onPressed: () async {
-              final novoJogo = await Navigator.of(context).push<Jogo>(
-                MaterialPageRoute(
-                  builder: (context) => const CadastroPage(),
-                ),
-              );
-
-              if (novoJogo != null) {
-                setState(() {
-                  biblioteca.adicionar(novoJogo);
-                });
-              }
-            },
+            tooltip: 'Cadastrar jogo',
           ),
         ],
       ),
