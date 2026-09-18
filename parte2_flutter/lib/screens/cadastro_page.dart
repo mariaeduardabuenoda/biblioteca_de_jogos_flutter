@@ -45,7 +45,9 @@ class _CadastroPageState extends State<CadastroPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Cadastrar Jogo')),
+      appBar: AppBar(
+        title: const Text('Cadastrar Jogo'),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -54,7 +56,12 @@ class _CadastroPageState extends State<CadastroPage> {
               controller: tituloController,
               decoration: const InputDecoration(
                 labelText: 'Título',
-                border: OutlineInputBorder(),
+                prefixIcon: Icon(Icons.videogame_asset),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
               ),
             ),
 
@@ -64,7 +71,12 @@ class _CadastroPageState extends State<CadastroPage> {
               controller: plataformaController,
               decoration: const InputDecoration(
                 labelText: 'Plataforma',
-                border: OutlineInputBorder(),
+                prefixIcon: Icon(Icons.devices),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
               ),
             ),
 
@@ -75,7 +87,12 @@ class _CadastroPageState extends State<CadastroPage> {
               keyboardType: TextInputType.number,
               decoration: const InputDecoration(
                 labelText: 'Preço',
-                border: OutlineInputBorder(),
+                prefixIcon: Icon(Icons.attach_money),
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
               ),
             ),
 

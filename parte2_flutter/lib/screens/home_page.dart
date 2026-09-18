@@ -3,14 +3,23 @@ import '../models/jogo.dart';
 import '../models/biblioteca.dart';
 import '../widgets/jogo_card.dart';
 import 'detalhes_page.dart';
+import 'cadastro_page.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    // Biblioteca que agrupa os jogos
-    final biblioteca = Biblioteca(
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  late Biblioteca biblioteca;
+
+  @override
+  void initState() {
+    super.initState();
+
+    biblioteca = Biblioteca(
       nome: 'Minha Biblioteca',
       jogos: [
         Jogo(
@@ -68,29 +77,52 @@ class HomePage extends StatelessWidget {
         ),
       ],
     );
+  }
 
+  @override
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Biblioteca de Jogos'),
         centerTitle: true,
         backgroundColor: Colors.deepPurple,
         foregroundColor: Colors.white,
+
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.add),
+            onPressed: () async {
+              final novoJogo = await Navigator.of(context).push<Jogo>(
+                MaterialPageRoute(
+                  builder: (context) => const CadastroPage(),
+                ),
+              );
+
+              if (novoJogo != null) {
+                setState(() {
+                  biblioteca.adicionar(novoJogo);
+                });
+              }
+            },
+          ),
+        ],
       ),
 
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          // Total de jogos da Biblioteca
           Padding(
             padding: const EdgeInsets.all(16.0),
             child: Text(
               'Total de jogos: ${biblioteca.totalJogos}',
-              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+              style: const TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           ),
 
-          // Lista dinâmica do exercício 7
           Expanded(
             child: ListView.builder(
               itemCount: biblioteca.jogos.length,
@@ -101,11 +133,15 @@ class HomePage extends StatelessWidget {
                   onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(
-                        builder: (context) => DetalhesPage(jogo: jogo),
+                        builder: (context) => DetalhesPage(
+                          jogo: jogo,
+                        ),
                       ),
                     );
                   },
-                  child: JogoCard(jogo: jogo),
+                  child: JogoCard(
+                    jogo: jogo,
+                  ),
                 );
               },
             ),
