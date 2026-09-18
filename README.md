@@ -26,6 +26,6 @@ O `README.md` precisa conter esta tabela preenchida para a orientação da corre
 | 5 | Estrutura de tela | `parte2_flutter/lib/screens/home_page.dart` | <details><summary>Clique para ver</summary>AppBar e corpo da tela inicial com o título "Biblioteca de Jogos"</details> |
 | 6 | Cartão | `parte2_flutter/lib/widgets/jogo_card.dart` | <details><summary>Clique para ver</summary>Card estilizado exibindo os detalhes visuais de cada jogo na lista</details> |
 | 7 | Lista | `parte2_flutter/lib/screens/home_page.dart` | <details><summary>Clique para ver</summary>Lista rolante (ListView) contendo os jogos cadastrados</details> |
-| 8 | Navegação | `parte2_flutter/lib/screens/home_page.dart:30` | <details><summary>Clique para ver</summary>Toque no item abre a tela com os detalhes do jogo</details> |
-| 9 | Formulário | `parte2_flutter/lib/screens/cadastro_page.dart:18` | <details><summary>Clique para ver</summary>Tela com campos para cadastrar novos jogos</details> |
+| 8 | Navegação | `parte2_flutter/lib/screens/home_page.dart` | <details><summary>Clique para ver</summary>Toque no item abre a tela com os detalhes do jogo</details> |
+| 9 | Formulário | `parte2_flutter/lib/screens/cadastro_page.dart` | <details><summary>Clique para ver</summary>Tela com campos para cadastrar novos jogos</details> |
 | 10 | Estado | `parte2_flutter/lib/screens/home_page.dart:40` | <details><summary>Clique para ver</summary>Item novo adicionado na lista e interface totalmente atualizada</details> |
