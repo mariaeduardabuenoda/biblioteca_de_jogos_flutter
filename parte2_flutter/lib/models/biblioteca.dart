@@ -6,8 +6,8 @@ class Biblioteca {
 
   Biblioteca({
     required this.nome,
-    required List<Jogo> jogos,
-  }) : _jogos = jogos;
+    required this._jogos,
+  });
 
   List<Jogo> get jogos => _jogos;
 

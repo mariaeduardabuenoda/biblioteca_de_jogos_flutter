@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/jogo.dart';
 import '../models/biblioteca.dart';
 import '../widgets/jogo_card.dart';
+import 'detalhes_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -85,10 +86,7 @@ class HomePage extends StatelessWidget {
             padding: const EdgeInsets.all(16.0),
             child: Text(
               'Total de jogos: ${biblioteca.totalJogos}',
-              style: const TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-              ),
+              style: const TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
             ),
           ),
 
@@ -97,8 +95,17 @@ class HomePage extends StatelessWidget {
             child: ListView.builder(
               itemCount: biblioteca.jogos.length,
               itemBuilder: (context, index) {
-                return JogoCard(
-                  jogo: biblioteca.jogos[index],
+                final jogo = biblioteca.jogos[index];
+
+                return GestureDetector(
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => DetalhesPage(jogo: jogo),
+                      ),
+                    );
+                  },
+                  child: JogoCard(jogo: jogo),
                 );
               },
             ),
