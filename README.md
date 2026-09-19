@@ -26,4 +26,4 @@ A Biblioteca de Jogos é composta pelas entidades Biblioteca, Jogo e JogoOnline:
 | 7 | Lista | `parte2_flutter/lib/screens/home_page.dart` | <details><summary>Clique para ver</summary>Lista rolante (ListView) contendo os jogos cadastrados</details> |
 | 8 | Navegação | `parte2_flutter/lib/screens/home_page.dart` | <details><summary>Clique para ver</summary>Toque no item abre a tela com os detalhes do jogo</details> |
 | 9 | Formulário | `parte2_flutter/lib/screens/cadastro_page.dart` | <details><summary>Clique para ver</summary>Tela com campos para cadastrar novos jogos</details> |
-| 10 | Estado | `parte2_flutter/lib/screens/home_page.dart:40` | <details><summary>Clique para ver</summary>Item novo adicionado na lista e interface totalmente atualizada</details> |
+| 10 | Estado | `parte2_flutter/lib/screens/home_page.dart` | <details><summary>Clique para ver</summary>Item novo adicionado na lista e interface totalmente atualizada</details> |
