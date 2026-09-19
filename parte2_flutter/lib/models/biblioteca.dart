@@ -2,12 +2,12 @@ import 'jogo.dart';
 
 class Biblioteca {
   String nome;
-  List<Jogo> _jogos;
+  final List<Jogo> _jogos;
 
   Biblioteca({
     required this.nome,
-    required List<Jogo> jogos,
-  }) : _jogos = jogos;
+    required this._jogos,
+  });
 
   List<Jogo> get jogos => _jogos;
 
