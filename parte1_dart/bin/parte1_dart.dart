@@ -62,6 +62,6 @@ void main() {
     dataCadastro: DateTime.now(),
   );
 
-  biblioteca.jogos.add(novoJogo);
+  biblioteca.adicionar(novoJogo);
   print('Total de jogos após adicionar: ${biblioteca.totalJogos}');
 }

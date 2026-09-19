@@ -45,9 +45,7 @@ class _CadastroPageState extends State<CadastroPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Cadastrar Jogo'),
-      ),
+      appBar: AppBar(title: const Text('Cadastrar Jogo')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -57,10 +55,10 @@ class _CadastroPageState extends State<CadastroPage> {
               decoration: const InputDecoration(
                 labelText: 'Título',
                 prefixIcon: Icon(Icons.videogame_asset),
+                prefixIconColor:
+                    Colors.deepPurple, 
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(12),
-                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
                 ),
               ),
             ),
@@ -72,10 +70,10 @@ class _CadastroPageState extends State<CadastroPage> {
               decoration: const InputDecoration(
                 labelText: 'Plataforma',
                 prefixIcon: Icon(Icons.devices),
+                prefixIconColor:
+                    Colors.deepPurple, // Cor do ícone aplicada aqui
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(12),
-                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
                 ),
               ),
             ),
@@ -88,10 +86,10 @@ class _CadastroPageState extends State<CadastroPage> {
               decoration: const InputDecoration(
                 labelText: 'Preço',
                 prefixIcon: Icon(Icons.attach_money),
+                prefixIconColor:
+                    Colors.deepPurple, 
                 border: OutlineInputBorder(
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(12),
-                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
                 ),
               ),
             ),
